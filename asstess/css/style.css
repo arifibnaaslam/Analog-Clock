@@ -5,15 +5,29 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
+   
     
 }
 
 .clock{
     width: 400px;
+    border: 10px solid rgb(35, 24, 24);
     height: 400px;
     background-color: blueviolet;
+    /* background-image: url(/asstess/img/Coxbazarc.jpg); */
     border-radius: 50%;
     position: relative;
+    .BrandName{
+
+        position: absolute;
+        width: 100%;
+        height: 100%; 
+        top: 20%;
+        left: 0%;
+        color: #0f0404;
+        align-items: center;
+        text-align: center;
+    }
     .striap-area{
         position: absolute;
         width: 96%;
@@ -55,7 +69,7 @@ body{
         height: 86%;
         top: 7%;
         left: 7%;
-        z-index: 4;
+        z-index: 2;
         /* background-color:rgb(21, 225, 252); */
         border-radius: 50%;
         .number{
@@ -65,7 +79,7 @@ body{
         height: 100%;
         top: 0;
         left: 0;
-        z-index: 4;
+        z-index: 3;
         /* background-color:rgb(206, 21, 252); */
         border-radius: 50%;
 
@@ -145,7 +159,7 @@ body{
         }
         .min::before{
             content: "";
-            height: 35%;
+            height: 45%;
             width: 10px;
             background-color: rgb(13, 42, 233);
             left: 50%;

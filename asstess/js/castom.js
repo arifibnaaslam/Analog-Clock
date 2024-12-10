@@ -7,6 +7,7 @@ myclock.append(kata());
  function myclockfun(){
     let parentdiv = document.createElement('div');
     parentdiv.classList.add('striap-area');
+    
     for(let i = 0 ;i<60; i++){
         let spanTagforstrip = document.createElement('span');
         
@@ -77,22 +78,23 @@ function updateKata(){
     let rs = d.getSeconds();
     let rm = d.getMinutes();
     let rh = d.getHours();
-    let rt = 30;
+    let rms = d.getMilliseconds();
 
     let secKata = document.querySelector('.sec');
     let minKata = document.querySelector('.min');
     let hourKata = document.querySelector('.hour');
-    console.log(rs);
-    console.log(rm);
-    console.log(rh);
+    //  console.log(rs);
+    //  console.log(rm);
+    //  console.log(rh);
+    console.log(rms);
 
-    secKata.style.transform = `rotate(${rs*6}deg)`;
-    minKata.style.transform = `rotate(${rm*6}deg)`;
+    secKata.style.transform = `rotate(${ ((rs*6)+rms*0.006)}deg)`;
+    minKata.style.transform = `rotate(${(rm*6)+(rs*.1)}deg)`;
     hourKata.style.transform = `rotate(${((rh %12)*30)+rm*.5}deg)`;
 
 
 }
-setInterval(updateKata, 1000);
+setInterval(updateKata, 10);
 updateKata()
 
 
